@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SahilFoods | Homely Maharashtrian Food in Vikhroli</title>
+
+  <meta name="description"
+        content="SahilFoods – Premium pure veg Maharashtrian thali, daily meals & Faral in Vikhroli East, Mumbai. Homely taste, hygienic kitchen.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<!-- <header class="navbar">
+  <div class="logo">
+  <img src="images/logo.jpg" alt="SahilFoods">
+  <span>SahilFoods</span>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header> -->
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.jpg" alt="SahilFoods">
+    <span>SahilFoods</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+</header>
+
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#menu" onclick="toggleMenu()">Menu</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- <div class="hero-content">
+    <h1>Ghar jaisa swaad,<br>roz taaza khana.</h1>
+    <p>Pure Veg Maharashtrian Meals • Made With Love</p>
+  </div> -->
+  <div class="hero-content">
+  <h1>Ghar jaisa swaad,<br>roz taaza khana.</h1>
+  <p>Pure Veg Maharashtrian Meals • Made With Love</p>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section about">
+  <h2>Our Story</h2>
+  <div class="comic-panel left">
+    <img src="images/story1.jpg" alt="Home Kitchen">
+    <div class="bubble">
+      <h3>Ghar Se Shuruaat</h3>
+      <p>
+        Ek simple kitchen se shuru hua sab kuch…<br>
+        <strong>Maa ki recipe ke saath</strong>.
+      </p>
+    </div>
+  </div>
+
+  <div class="comic-panel right">
+    <img src="images/story2.jpg" alt="Working Professionals">
+    <div class="bubble">
+      <h3>Kyu na kuch karein?</h3>
+      <p>
+        Jab humne dekha ki working professionals ko ghar jaisa khana nahi milta, humne socha<br>
+        <strong>kyun na hum serve karein?</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="comic-panel left">
+    <img src="images/story3.jpg" alt="Tiffin Delivery">
+    <div class="bubble">
+      <h3>Aaj Ka Safar</h3>
+      <p>
+        Aur aaj har tiffin mein wahi pyaar jaata hai<br>
+        jo hum <strong>apne ghar walon</strong> ke liye banate hain.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- MENU -->
+<section id="menu" class="section menu">
+  <h2>Our Specialities</h2>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="images/food1.jpg">
+      <h3>Maharashtrian Veg Thali</h3>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/food2.jpg">
+      <h3>Dal Rice & Comfort Meals</h3>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/food3.jpg">
+      <h3>Thepla meal</h3>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/faral1.jpg">
+      <h3>Faral – Chivda, Chakli, Laadu</h3>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section gallery">
+  <h2>Gallery</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="images/hero.jpg"></div>
+    <div class="gallery-item"><img src="images/food1.jpg"></div>
+    <div class="gallery-item"><img src="images/food4.jpg"></div>
+    <div class="gallery-item"><img src="images/food5.jpg"></div>
+    <div class="gallery-item"><img src="images/food6.jpg"></div>
+    <div class="gallery-item"><img src="images/food7.jpg"></div>
+    <div class="gallery-item"><img src="images/food8.jpg"></div>
+    <div class="gallery-item"><img src="images/food9.jpg"></div>
+    <div class="gallery-item"><img src="images/food10.jpg"></div>
+    <div class="gallery-item"><img src="images/food11.jpg"></div>
+    <div class="gallery-item"><img src="images/food12.jpg"></div>
+    <div class="gallery-item"><img src="images/food13.jpg"></div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<!-- CONTACT + MAP -->
+<section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+
+<div class="contact-wrapper">
+
+  <div class="contact-card">
+    <h3>SahilFoods</h3>
+
+    <p>📍 200/2960, Near Yashwant Hospital,<br>
+      Tagore Nagar, Vikhroli East,<br>
+      Mumbai – 400083
+    </p>
+
+    <p>📞 Phone / WhatsApp:<br><strong>+91 8898120456</strong></p>
+
+    <a href="https://www.google.com/maps/dir/?api=1&destination=19.1469,72.9560"
+       target="_blank"
+       class="btn-directions">
+      Get Directions
+    </a>
+  </div>
+
+  <div class="map-card">
+    <div id="map"></div>
+  </div>
+
+</div>
+</section>
+
+
+<!-- POLICIES -->
+<section class="policies">
+  <h2>📄 Policies & Information</h2>
+
+  <div class="policy-grid">
+
+    <!-- Terms -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h3>🍱 Terms & Conditions</h3>
+          <p>Read our order rules</p>
+        </div>
+        <div class="flip-back">
+          <ul>
+            <li>Advance payment is mandatory.</li>
+            <li>Orders must be placed before daily cutoff time.</li>
+            <li>No delivery if previous dues are pending.</li>
+            <li>Menu may vary based on availability.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h3>🔒 Privacy Policy</h3>
+          <p>Your data is safe</p>
+        </div>
+        <div class="flip-back">
+          <ul>
+            <li>Phone number & address used only for delivery.</li>
+            <li>No data shared with third parties.</li>
+            <li>Payments handled securely via UPI apps.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Refund -->
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <h3>🔁 Refund & Cancellation</h3>
+          <p>Know our refund rules</p>
+        </div>
+        <div class="flip-back">
+          <ul>
+            <li>Same-day cancellation not allowed.</li>
+            <li>No refund after food preparation starts.</li>
+            <li>Refund only if delivery fails from our side.</li>
+            <li>Quality issues must be reported within 1 hour.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="agree-text">✅ By placing an order, you agree to all policies.</p>
+</section>
+
+
+<footer>
+  © 2026 SahilFoods. All rights reserved.
+</footer>
+<script>
+var map = L.map('map').setView([19.1469, 72.9560], 15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+}).addTo(map);
+
+L.marker([19.1469, 72.9560]).addTo(map)
+  .bindPopup("<b>SahilFoods</b><br>Near Yashwant Hospital, Vikhroli East");
+
+L.circle([19.1469, 72.9560], {
+  color: 'green',
+  fillColor: '#7FFF7F',
+  fillOpacity: 0.2,
+  radius: 3000
+}).addTo(map);
+</script>
+
+</body>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+</html>
